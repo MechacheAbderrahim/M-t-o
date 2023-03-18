@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Météo</title>
+
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/MyFramework.css">
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="preloader">
+      <div id="cercle"></div>
+  </div>
+  <!-- NAV BAR  -->
+  <nav>
+    <div class="nav_l">
+      <i class="fa-solid fa-bars ic"></i>
+      <i class="fa-regular fa-bell ic"></i>
+      <div class="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <p><span id="villeSelected"></span></p>
+      </div>
+    </div>
+
+    <form action="" method="" id="form_f">
+      <button type="submit" onclick="updateVille()">
+        <i class="fa-solid fa-magnifying-glass ic"></i>
+      </button>
+      <input type="text" placeholder=" Search city..." onfocus="myFunction()" onfocusout="myFunction2()" id="villeS" name="villeS">
+    </form>
+
+    <div class="nav_r">
+      <div class="mode">
+        <i class="fa-regular fa-sun ic"></i>
+        <i class="fa-solid fa-moon m-active ic"></i>
+      </div>
+      <i class="fa-solid fa-user user ic"></i>
+    </div>
+  </nav>
+  <!-- END NAV BAR  -->
+
+  <!-- MAIN  -->
+  <main>
+    <div class="main_1">
+      <div class="week">
+        <div class="aw">
+          <div class="choice_w">
+            <button class="active">Next 7 days</button>
+          </div>
+        </div>
+        <div class="ww" id="ww">
+          <div class="b-today">
+            <div class="time">
+              <p class="d" id="t_day">Today</p>
+              <p class="t" id="l_u"></p>
+            </div>
+            <div class="st">
+              <div class="st_1">
+                <div class="tmp" id="tempC"></div>
+                <ul>
+                  <li>Real Feel: <span>18°</span></li>
+                  <li>Wind: N-E, <span>5-8 km/h</span></li>
+                  <li>Pressure: <span>1000MB</span></li>
+                  <li>Humidity: <span>51%</span></li>
+                </ul>
+              </div>
+              <div class="st_2">
+                <span class="img_st" id="img_st">
+
+                </span>
+                <ul>
+                  <li>Sunrise: <span>6:02 AM</span> </li>
+                  <li>Sunsel: <span>9:18 PM</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="map_info">
+          <p>Global Informations of this city:</p>
+        </div>
+        <div class="map">
+          <p>name: <strong id="nom"></strong></p>
+          <p>region: <strong id="region"></strong></p>
+          <p>country: <strong id="country"></strong></p>
+          <p>localtime: <strong id="localtime"></strong></p>
+        </div>
+      </div>
+      <div class="graphs">
+        <p class="title">Forcast data</p>
+        <div class="graph1">
+          <div class="axe_y">
+            <p>50°</p>
+            <p>30°</p>
+            <p>10°</p>
+          </div>
+          <div class="char">
+            <div class="prog">
+              <div class="pp" id="pp1"></div>
+            </div>
+            <p class="ti">12AM</p>
+          </div>
+          <div class="char">
+            <div class="prog">
+              <div class="pp" id="pp2"></div>
+            </div>
+            <p class="ti">06AM</p>
+          </div>
+          <div class="char">
+            <div class="prog">
+              <div class="pp" id="pp3"></div>
+            </div>
+            <p class="ti">12PM</p>
+          </div>
+          <div class="char">
+            <div class="prog">
+              <div class="pp" id="pp4"></div>
+            </div>
+            <p class="ti">18PM</p>
+          </div>
+          <div class="char">
+            <div class="prog">
+              <div class="pp" id="pp5"></div>
+            </div>
+            <p class="ti">23PM</p>
+          </div>
+        </div>
+        <div class="citys" id="citys">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- END MAIN  -->
+
+  <script src="main.js"></script>
+</body>
+
+</html>
